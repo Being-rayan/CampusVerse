@@ -1,0 +1,33 @@
+{
+  "name": "campusverse",
+  "version": "1.0.0",
+  "description": "Full-stack 3D student collaboration platform.",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n client,server -c cyan,magenta \"npm run dev --workspace client\" \"npm run dev --workspace server\"",
+    "build": "npm run build --workspace client && npm run build --workspace server",
+    "check": "npm run format:check && npm run lint --workspace client && npm run build --workspace server",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "client": "npm run dev --workspace client",
+    "server": "npm run dev --workspace server"
+  },
+  "keywords": [
+    "campusverse",
+    "skillcity",
+    "threejs",
+    "student-platform"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "three": "^0.182.0"
+  }
+}
