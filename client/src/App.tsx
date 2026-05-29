@@ -34,11 +34,7 @@ function App() {
   const isCityView = view === 'city'
 
   return (
-    <main
-      className={`relative min-h-screen overflow-hidden ${
-        isCityView ? 'bg-[#dff3ff] text-slate-950' : 'bg-[#040711] text-slate-100'
-      }`}
-    >
+    <main className="relative min-h-screen overflow-hidden bg-[#040711] text-slate-100">
       {isCityView ? (
         <CityScene activeDistrict={activeDistrict} onSelect={setActiveDistrict} />
       ) : (
@@ -48,7 +44,7 @@ function App() {
       <div
         className={`pointer-events-none absolute inset-0 ${
           isCityView
-            ? 'bg-[linear-gradient(180deg,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.03)_45%,rgba(70,92,72,0.12)_100%)]'
+            ? 'bg-[radial-gradient(circle_at_50%_10%,rgba(17,217,255,0.16),transparent_32%),linear-gradient(180deg,rgba(4,7,17,0)_40%,rgba(4,7,17,0.9)_100%)]'
             : 'bg-[radial-gradient(circle_at_50%_10%,rgba(17,217,255,0.16),transparent_32%),linear-gradient(180deg,rgba(4,7,17,0)_40%,rgba(4,7,17,0.9)_100%)]'
         }`}
       />
