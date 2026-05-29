@@ -29,10 +29,10 @@ export function DistrictNav({ activeDistrict, onSelect }: DistrictNavProps) {
             key={district.id}
             type="button"
             onClick={() => onSelect(district)}
-            className={`flex min-h-12 min-w-44 items-center gap-2 rounded border px-3 py-2 text-left text-xs font-semibold backdrop-blur transition md:min-h-14 md:min-w-0 ${
+            className={`flex min-h-12 min-w-44 items-center gap-2 rounded border px-3 py-2 text-left text-xs font-semibold text-white backdrop-blur transition md:min-h-14 md:min-w-0 ${
               isActive
-                ? 'border-emerald-700/35 bg-white/88 text-emerald-950 shadow-lg shadow-emerald-950/10'
-                : 'border-emerald-950/10 bg-white/60 text-slate-800 hover:border-emerald-700/25 hover:bg-white/86'
+                ? 'border-cyan-200 bg-cyan-300/18 shadow-lg shadow-cyan-950/40'
+                : 'border-white/12 bg-black/42 hover:border-white/30 hover:bg-white/10'
             }`}
           >
             <Icon size={17} />
